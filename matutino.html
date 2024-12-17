@@ -21,17 +21,31 @@
   </header>
 
   <main>
-    <!-- Matutino -->
-    <section>
-      <!-- Barra de ferramentas superior -->
-      <article class="w3-panel">
-        <a id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large" href="#"><span
-            class="fas fa-plus"></span></a>
-        <input id="procura" class="w3-border w3-padding" style="width:70%" type="text" name="procura"
-          placeholder="Disciplina, professor ou dia da semana">
-        <a id="btn-procurar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large" href="#"
-          onclick="montarListaCadastro()"><span class="fas fa-search"></span></a>
-      </article>
+    <!-- Barra de ferramentas superior -->
+    <section class="w3-panel">
+      <a id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large" href="#"><span
+          class="fas fa-plus"></span></a>
+      <input id="pesquisa" class="w3-border w3-padding" style="width:70%" type="text" name="pesquisa"
+        placeholder="Disciplina, professor ou dia da semana">
+      <a id="btn-pesquisar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large" href="#"
+        onclick="montarListaCadastro()"><span class="fas fa-search"></span></a>
+    </section>
+
+    <!-- Painel da lista -->
+    <section class="w3-panel w3-responsive">
+      <table class="w3-table w3-striped w3-hoverable w3-small">
+        <thead>
+          <tr class="w3-deep-orange">
+            <th>&nbsp;AÇÕES&nbsp;</th>
+            <th>Disciplina</th>
+            <th>Dia da semana</th>
+            <th>Professor</th>
+            <th>Sala</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </section>
   </main>
 
@@ -43,7 +57,7 @@
           class="material-icons">sunny_snowing</i><br>Vespetino</a>
       <a href="#" class="w3-bar-item w3-button w3-small w3-hover-orange"><i
           class="material-icons">nightlight</i><br>Noturno</a>
-      <a href="confs.html" class="w3-bar-item w3-button w3-small w3-hover-orange w3-right"><i
+      <a href="index.html" class="w3-bar-item w3-button w3-small w3-hover-orange w3-right"><i
           class="material-icons">settings</i><br>Confs</a>
     </div>
   </footer>
