@@ -23,12 +23,14 @@
   <main>
     <!-- Barra de ferramentas superior -->
     <section class="w3-panel w3-center">
-      <a id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small" href="#"><span
-          class="fas fa-plus"></span></a>
-      <input id="pesquisa" class="w3-border w3-padding-small" style="width:70%" type="text" name="pesquisa"
+      <a id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small" href="#"
+      onclick="document.getElementById('formulario').style.display='block'"><i
+      class="material-icons">add</i></a>
+      <input id="pesquisa" class="w3-border w3-padding-small" type="text" name="pesquisa"
         placeholder="Disciplina, professor ou dia da semana">
       <a id="btn-pesquisar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small" href="#"
-        onclick="montarListaCadastro()"><span class="fas fa-search"></span></a>
+        onclick=""><i
+        class="material-icons">search</i></a>
     </section>
 
     <!-- Painel da lista -->
@@ -46,6 +48,29 @@
         <tbody>
         </tbody>
       </table>
+    </section>
+
+    <!-- Painel do formulário -->
+    <section class="w3-panel">
+      <div id="formulario" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content w3-card-4">
+          <header class="w3-container w3-orange"> 
+            <h2>Adicionar</h2>
+          </header>
+          <div class="w3-container">
+            <p>You have two options to close this modal:</p>
+            <p>Click on the "x" or click anywhere outside of the modal!</p>
+          </div>
+          <footer class="w3-container w3-deep-orange w3-padding">
+            <a id="btn-salvar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small" href="#"
+            onclick=""><i
+            class="material-icons">check</i></a>
+            <a id="btn-cancelar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small" href="#"
+            onclick="document.getElementById('formulario').style.display='none'"><i
+            class="material-icons">backspace</i></a>
+          </footer>
+        </div>
+      </div>
     </section>
   </main>
 
