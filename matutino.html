@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="matutino.js"></script>
 </head>
 
 <body>
@@ -18,15 +19,15 @@
   <main>
     <!-- Barra de ferramentas superior -->
     <section class="w3-panel w3-center">
-      <a id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-padding-small" href="#"
-      onclick="document.getElementById('formulario').style.display='block'"><i
-      class="material-icons">add</i></a>
+      <button id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large"
+      onclick="document.getElementById('formulario').style.display='block'" style="padding: 0px 3px;"><i
+      class="material-icons">add</i></button>
 
       <input id="pesquisa" class="w3-border w3-padding-small" type="text" name="pesquisa"
         placeholder="Disciplina, professor ou dia da semana">
 
-      <a id="btn-pesquisar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-padding-small" href="#"><i
-        class="material-icons">search</i></a>
+      <button id="btn-pesquisar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-padding-small"><i
+        class="material-icons">search</i></button>
     </section>
 
     <!-- Painel da lista -->
@@ -34,9 +35,9 @@
       <table id="lista-cadastro" class="w3-table w3-striped w3-hoverable w3-small">
         <thead>
           <tr class="w3-deep-orange">
-            <th>&nbsp;AÇÕES&nbsp;</th>
+            <th>&nbsp;AÇÕES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
             <th>Disciplina</th>
-            <th>Dia da semana</th>
+            <th>Dia</th>
             <th>Professor</th>
             <th>Sala</th>
           </tr>
