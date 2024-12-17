@@ -1,9 +1,24 @@
+$(document).ready(function(){
 
-function myFunction() {
-  var x = document.getElementById("demo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+//   $("#a-matutino").click(function(){
+//     $(this).hide();
+//   });
+  
+//   function atualizarConfs(){
+//     if ( $("#a-matutino").className.indexOf("w3-show") == -1 ) {
+//       x.className += " w3-show";
+//     } else { 
+//       x.className = x.className.replace(" w3-show", "");
+//     }
+//   }
+
+// function myFunction() {
+//   var x = document.getElementById("demo");
+//   if (x.className.indexOf("w3-show") == -1) {
+//     x.className += " w3-show";
+//   } else { 
+//     x.className = x.className.replace(" w3-show", "");
+//   }
+// }
+
+});
