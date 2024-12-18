@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="styles.css">
   <script src="matutino.js"></script>
 </head>
 
@@ -20,13 +21,13 @@
     <!-- Barra de ferramentas superior -->
     <section class="w3-panel w3-center">
       <button id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large"
-      onclick="document.getElementById('formulario').style.display='block'" style="padding: 0px 3px;"><i
+      onclick="document.getElementById('painel-formulario').style.display='block'"><i
       class="material-icons">add</i></button>
 
       <input id="pesquisa" class="w3-border w3-padding-small" type="text" name="pesquisa"
         placeholder="Disciplina, professor ou dia da semana">
 
-      <button id="btn-pesquisar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-padding-small"><i
+      <button id="btn-pesquisar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large"><i
         class="material-icons">search</i></button>
     </section>
 
@@ -50,39 +51,47 @@
     <!-- Painel do formulário -->
     <section class="w3-panel">
       <!-- Fundo da janela modal -->
-      <div id="formulario" class="w3-modal w3-animate-opacity">
+      <div id="painel-formulario" class="w3-modal w3-animate-opacity">
         <!-- Janela modal -->
         <div class="w3-modal-content w3-card-4">
-          <form onsubmit="inserirMatutino()">
+          <form  id="formulario">
             <!-- Campos -->
-            <div class="w3-container">
+            <main class="w3-container">
               <br>
               <div class="campo-form">
                 <label for="disciplina"><b>Nome da </b>Disciplina</label>
-                <textarea class="w3-input" name="disciplina" id="disciplina" rows="3" placeholder="Permite letras, números e símbolos; Requer preenchimento."></textarea>
+                <textarea class="w3-input" name="disciplina" id="disciplina" rows="3" placeholder="Permite letras, números e símbolos; Requer preenchimento." required></textarea>
               </div>
               <div class="campo-form">
                 <label for="professor"><b>Nome do </b>Professor</label>
-                <input class="w3-input" type="text" name="professor" id="professor" placeholder="Permite somente letras.">
+                <input class="w3-input" type="text" name="professor" id="professor" placeholder="Permite somente letras." >
               </div>
               <div class="campo-form">
                 <label for="diaDaSemana">Dia da semana</label>
-                <input class="w3-input" type="text" name="diaDaSemana" id="diaDaSemana" placeholder="Permite letras, números e símbolos.">
+                <select id="diaDaSemana" name="diaDaSemana" class="w3-input">
+                  <option value="">Selecione um dia</option>
+                  <option value="Segunda-feira">Segunda-feira</option>
+                  <option value="Terça-feira">Terça-feira</option>
+                  <option value="Quarta-feira">Quarta-feira</option>
+                  <option value="Quinta-feira">Quinta-feira</option>
+                  <option value="Sexta-feira">Sexta-feira</option>
+                </select> 
               </div>
               <div class="campo-form">
                 <label for="sala">Sala</label>
                 <input class="w3-input" type="text" name="sala" id="sala" placeholder="Permite letras, números e símbolos.">
               </div>
               <br>
-            </div>
+
+              <article id="mensagem"></article>
+            </main>
             <!-- Botões -->
             <footer class="w3-container w3-deep-orange w3-padding">
-              <a id="btn-salvar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small" href="#"
-              onclick="document.getElementById('formulario').style.display='none'"><i
-              class="material-icons">check</i></a>
-              <a id="btn-cancelar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small" href="#"
-              onclick="document.getElementById('formulario').style.display='none'"><i
-              class="material-icons">backspace</i></a>
+              <button type="submit" id="btn-salvar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small">
+              <i class="material-icons">check</i></button>
+
+              <button id="btn-cancelar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small"><i
+              class="material-icons">backspace</i></button>
             </footer>
           </form>
         </div>
