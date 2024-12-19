@@ -20,8 +20,7 @@
   <main>
     <!-- Barra de ferramentas superior -->
     <section class="w3-panel w3-center">
-      <button id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large"
-      onclick="document.getElementById('painel-formulario').style.display='block'"><i
+      <button id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large"><i
       class="material-icons">add</i></button>
 
       <input id="pesquisa" class="w3-border w3-padding-small" type="text" name="pesquisa"
@@ -33,6 +32,7 @@
 
     <!-- Painel da lista -->
     <section class="w3-panel w3-responsive">
+      <article id="msg-listar"></article>
       <table id="lista-cadastro" class="w3-table w3-striped w3-hoverable w3-small">
         <thead>
           <tr class="w3-deep-orange">
@@ -54,9 +54,10 @@
       <div id="painel-formulario" class="w3-modal w3-animate-opacity">
         <!-- Janela modal -->
         <div class="w3-modal-content w3-card-4">
-          <form  id="formulario">
+          <form id="formulario" class="Adicionar">
             <!-- Campos -->
             <main class="w3-container">
+              <input type="hidden" id="id">
               <br>
               <div class="campo-form">
                 <label for="disciplina"><b>Nome da </b>Disciplina</label>
@@ -67,15 +68,21 @@
                 <input class="w3-input" type="text" name="professor" id="professor" placeholder="Permite somente letras." >
               </div>
               <div class="campo-form">
-                <label for="diaDaSemana">Dia da semana</label>
-                <select id="diaDaSemana" name="diaDaSemana" class="w3-input">
-                  <option value="">Selecione um dia</option>
-                  <option value="Segunda-feira">Segunda-feira</option>
-                  <option value="Terça-feira">Terça-feira</option>
-                  <option value="Quarta-feira">Quarta-feira</option>
-                  <option value="Quinta-feira">Quinta-feira</option>
-                  <option value="Sexta-feira">Sexta-feira</option>
-                </select> 
+                <fieldset>
+                  <legend>Dia da semana</legend>
+                  <input type="radio" id="2af" name="diaDaSemana" value="2af" />
+                  <label for="2af">2af&nbsp;&nbsp;</label>
+                  <input type="radio" id="3af" name="diaDaSemana" value="3af" />
+                  <label for="3af">3af&nbsp;&nbsp;</label>
+                  <input type="radio" id="4af" name="diaDaSemana" value="4af" />
+                  <label for="4af">4af&nbsp;&nbsp;</label>
+                  <input type="radio" id="5af" name="diaDaSemana" value="5af" />
+                  <label for="5af">5af&nbsp;&nbsp;</label>
+                  <input type="radio" id="6af" name="diaDaSemana" value="6af" />
+                  <label for="6af">6af&nbsp;&nbsp;</label>
+                  <input type="radio" id="Sab" name="diaDaSemana" value="Sab" />
+                  <label for="Sab">Sáb</label>  
+              </fieldset>          
               </div>
               <div class="campo-form">
                 <label for="sala">Sala</label>
@@ -83,7 +90,7 @@
               </div>
               <br>
 
-              <article id="mensagem"></article>
+              <article id="msg-form"></article>
             </main>
             <!-- Botões -->
             <footer class="w3-container w3-deep-orange w3-padding">
