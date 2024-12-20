@@ -5,6 +5,7 @@ window.onload = function() {
   const campoDisciplina = document.getElementById('disciplina');
   const msgForm = document.getElementById('msg-form');
   const btnCancelar = document.querySelector('#btn-cancelar');
+  const formPesquisa = document.getElementById('form-pesquisa');
   const pesquisa = document.querySelector('#pesquisa');
   const btnPesquisar = document.querySelector('#btn-pesquisar');
   const msgListar = document.getElementById('msg-listar');
@@ -18,6 +19,8 @@ window.onload = function() {
     doFiltro: '/ensalamentoM',
   };
 
+  pesquisa.focus();
+
   // Botão Adicionar da barra de pesquisa
   btnAdicionar.addEventListener('click', function(event) {
     event.preventDefault();
@@ -28,12 +31,12 @@ window.onload = function() {
   });
 
   // Botão pesquisar da barra de pesquisa
-  btnPesquisar.addEventListener('click', function(event) {
+  // btnPesquisar.addEventListener('click', function(event) {
+  formulario.addEventListener('submit', function(event) {
     event.preventDefault();
 
     let endPoint = rota.base + rota.doFiltro + "/" + pesquisa.value;
-    let urlAlterar = "", urlExcluir = "";
-    let tr, td, button, ii;
+    let tr;
 
     // Mostrar msg-listar de Carregando...
     msgListar.textContent = 'Carregando...';
@@ -228,6 +231,7 @@ window.onload = function() {
     campoDisciplina.focus();
   }
 
+  // Botão alterar da lista
   function alterar(){
     // Pegar os dados do formulário
     const dados = {

@@ -98,6 +98,8 @@ window.onload = function() {
     const dados = jsonResult;
     console.log(dados);
 
+    let i = 1;
+
     for(let dado of dados) {
       let endPoint = rota.base + rota.geral;
       console.log(endPoint);
@@ -121,8 +123,10 @@ window.onload = function() {
       .catch(error => {
         console.error(error);
       });
+
+      output.textContent = `Importado ${i} de ${dados.length} linhas.`;
+      i++;
     }
   };
-
 
 }

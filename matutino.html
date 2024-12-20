@@ -20,14 +20,16 @@
   <main>
     <!-- Barra de ferramentas superior -->
     <section class="w3-panel w3-center">
-      <button id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large"><i
-      class="material-icons">add</i></button>
+      <form id="form-pesquisa">
+        <button id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large"><i
+        class="material-icons">add</i></button>
 
-      <input id="pesquisa" class="w3-border w3-padding-small" type="text" name="pesquisa"
-        placeholder="Disciplina, professor ou dia da semana">
+        <input id="pesquisa" class="w3-border w3-padding-small" type="text" name="pesquisa"
+          placeholder="Disciplina, professor ou dia da semana" required>
 
-      <button id="btn-pesquisar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large"><i
-        class="material-icons">search</i></button>
+        <button id="btn-pesquisar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large" type="submit"><i
+          class="material-icons">search</i></button>
+      </form>
     </section>
 
     <!-- Painel da lista -->
