@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
 </head>
 
 <body>
@@ -20,10 +21,23 @@
     <!-- Confs -->
     <section class="w3-container w3-center">
       <article class="w3-panel w3-amber w3-round-large w3-card-4">
-        <h2>Administração<br>Ensalamento Anhanguera Catuaí</h2>
+        <h3>Administração<br>Ensalamento Anhanguera Catuaí</h3>
         <p>&nbsp;&nbsp;&nbsp;Aplicativo de administração do aplicativo de apoio à localização de salas no campus Catuaí da universidade Anhanguera Pitágoras Unopar de Londrina. Versão 1.00</p>
-        <p>Autor: prof. esp. Wagner L. Berto | Todos os direitos reservados.</p>
+        <p><small>Autor: prof. esp. Wagner L. Berto | Todos os direitos reservados.</small></p>
       </article>
+    </section>
+
+    <!-- Importação de arquivo TSV -->
+    <section class="w3-container">
+      <fieldset class="w3-container w3-padding">
+        <legend><h4>Importação de arquivo TSV</h4></legend>
+        <div class="campo-form">
+          <label for="tsvFileInput">Selecionar um arquivo TSV:</label>
+          <input type="file" id="tsvFileInput" name="tsvFileInput" accept=".tsv" class="w3-input"/>
+        </div>
+        <button id="btn-importar" class="w3-input">Importar</button>
+        <pre id="output"></pre>
+      </fieldset>
     </section>
   </main>
 

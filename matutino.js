@@ -66,7 +66,7 @@ window.onload = function() {
                 Excluir
               </button>
             </td>
-            <td>${item.id}-${item.disciplina}</td>
+            <td>${item.disciplina}</td>
             <td>${item.dia_da_semana}</td>
             <td>${item.professor}</td>
             <td>${item.sala}</td>
@@ -143,6 +143,13 @@ window.onload = function() {
       // Mostrar msg-form de sucesso
       msgForm.textContent = 'Dados inseridos com sucesso!';
       msgForm.setAttribute('class', "w3-panel w3-border w3-round-large w3-center w3-padding-large w3-green");
+
+      // Limpar a linha de carregamento
+      tbody.innerHTML = "";
+
+      // Mostrar msg-listar de adicionado com sucesso
+      msgListar.textContent = 'Refaça sua pesquisa.';
+      msgListar.setAttribute('class', "w3-panel w3-border w3-round-large w3-center w3-padding-large w3-pale-yellow");      
     })
     .catch(error => {
       // Mostrar msg-form de erro
@@ -257,9 +264,9 @@ window.onload = function() {
       // Limpar a linha de carregamento
       tbody.innerHTML = "";
 
-      // Mostrar msg-listar de excluído com sucesso
+      // Mostrar msg-listar de alterado com sucesso
       msgListar.textContent = 'Refaça sua pesquisa.';
-      msgListar.setAttribute('class', "w3-panel w3-border w3-round-large w3-center w3-padding-large w3-pale-green");
+      msgListar.setAttribute('class', "w3-panel w3-border w3-round-large w3-center w3-padding-large w3-pale-yellow");
     })
     .catch(error => {
       // Mostrar msg-form de erro
