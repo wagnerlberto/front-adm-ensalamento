@@ -7,13 +7,13 @@ window.onload = function() {
   const btnCancelar = document.querySelector('#btn-cancelar');
   const formPesquisa = document.getElementById('form-pesquisa');
   const pesquisa = document.querySelector('#pesquisa');
-  const btnPesquisar = document.querySelector('#btn-pesquisar');
   const msgListar = document.getElementById('msg-listar');
   const tbody = document.querySelector('#lista-cadastro tbody');
 
   rota = {
     // Usar o URL abaixo em produção
-    base: "https://back-ensalamento.onrender.com",
+    // base: "https://back-ensalamento.onrender.com",
+    base: "https://back-enspiza.onrender.com",
     // base: 'http://localhost:3000',
     geral: '/matutino',
     doFiltro: '/ensalamentoM',
@@ -31,8 +31,7 @@ window.onload = function() {
   });
 
   // Botão pesquisar da barra de pesquisa
-  // btnPesquisar.addEventListener('click', function(event) {
-  formulario.addEventListener('submit', function(event) {
+  formPesquisa.addEventListener('submit', function(event) {
     event.preventDefault();
 
     let endPoint = rota.base + rota.doFiltro + "/" + pesquisa.value;

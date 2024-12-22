@@ -7,7 +7,8 @@ window.onload = function() {
 
   rota = {
     // Usar o URL abaixo em produção
-    base: "https://back-ensalamento.onrender.com",
+    // base: "https://back-ensalamento.onrender.com",
+    base: "https://back-enspiza.onrender.com",
     // base: 'http://localhost:3000',
     geral: '/matutino',
     doFiltro: '/ensalamentoM',
